@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xoriant.delivery.model.Brand;
 import com.xoriant.delivery.service.BrandService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/api/brands")
+@Slf4j
 public class BrandController {
 
 	@Autowired
@@ -20,6 +23,7 @@ public class BrandController {
 
 	@PostMapping("/save")
 	public ResponseEntity<String> addNewBrand(@RequestBody Brand brand) {
+		log.info("addNewBrand() called");
 		String response = brandService.addNewBrand(brand);
 		return new ResponseEntity<String>(response, HttpStatus.CREATED);
 	}
