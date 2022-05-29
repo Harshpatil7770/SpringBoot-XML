@@ -22,7 +22,7 @@ public class CategoryController {
 	private CategoryService categoryService;
 
 	@PostMapping("/save")
-	private ResponseEntity<String> addNewCategory(@RequestBody Category category) {
+	public ResponseEntity<String> addNewCategory(@RequestBody Category category) {
 		log.info("addNewCategory() called");
 		String response = categoryService.addNewCategory(category);
 		return new ResponseEntity<String>(response, HttpStatus.CREATED);
