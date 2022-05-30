@@ -1,5 +1,8 @@
 package com.xoriant.delivery.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +28,22 @@ public class BrandServiceImpl implements BrandService {
 		brandRepository.save(brand);
 		String response = "New Brand Added Succesfully !";
 		return response;
+	}
+
+	@Override
+	public List<Brand> fetchAllBrands() {
+		return brandRepository.findAll();
+	}
+
+	@Override
+	public Brand findByBrandName(String brandName) {
+		return brandRepository.findByBrandName(brandName);
+	}
+
+	@Override
+	public Optional<Brand> findByBrandId(int brandId) {
+		Optional<Brand> existingBrand = brandRepository.findById(brandId);
+		return existingBrand;
 	}
 
 }
