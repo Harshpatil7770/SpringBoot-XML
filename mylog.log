@@ -4539,3 +4539,173 @@ org.supercsv.exception.SuperCsvReflectionException: unable to find getter for fi
 2022-05-30 11:17:45.087  INFO 37560 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-05-30 11:17:45.088  INFO 37560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-30 11:17:45.088  INFO 37560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-30 11:39:25.934  INFO 42116 --- [restartedMain] c.x.delivery.SpringBootJpaApplication    : Starting SpringBootJpaApplication using Java 17.0.1 on Harshawardhan-PA with PID 42116 (C:\Users\patil_ha\springboot_overall\SpringBoot-Jpa\target\classes started by patil_ha in C:\Users\patil_ha\springboot_overall\SpringBoot-Jpa)
+2022-05-30 11:39:25.936  INFO 42116 --- [restartedMain] c.x.delivery.SpringBootJpaApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-05-30 11:39:25.990  INFO 42116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-30 11:39:25.990  INFO 42116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-30 11:39:26.965  INFO 42116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-30 11:39:27.027  INFO 42116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2022-05-30 11:39:27.568  INFO 42116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-30 11:39:27.577  INFO 42116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-30 11:39:27.577  INFO 42116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-30 11:39:29.097  INFO 42116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-30 11:39:29.098  INFO 42116 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3107 ms
+2022-05-30 11:39:29.134  INFO 42116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-30 11:39:29.421  INFO 42116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-30 11:39:29.432  INFO 42116 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:D:/h2db/ecartjpa'
+2022-05-30 11:39:29.583  INFO 42116 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-30 11:39:29.626  INFO 42116 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-30 11:39:29.782  INFO 42116 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-30 11:39:29.880  INFO 42116 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-30 11:39:30.446 DEBUG 42116 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table brands_product_lists 
+       drop constraint if exists UK_ltnx9m0dbbx8nka5ookqvtrdf
+2022-05-30 11:39:30.449 DEBUG 42116 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table brands_product_lists 
+       add constraint UK_ltnx9m0dbbx8nka5ookqvtrdf unique (product_lists_product_id)
+2022-05-30 11:39:30.450 DEBUG 42116 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table categories_brand_lists 
+       drop constraint if exists UK_oo0eky2igrkmjksethuvpvopy
+2022-05-30 11:39:30.450 DEBUG 42116 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table categories_brand_lists 
+       add constraint UK_oo0eky2igrkmjksethuvpvopy unique (brand_lists_brand_id)
+2022-05-30 11:39:30.457  INFO 42116 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-30 11:39:30.464  INFO 42116 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-30 11:39:30.868  WARN 42116 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-30 11:39:31.822  INFO 42116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-30 11:39:31.868  INFO 42116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-30 11:39:31.880  INFO 42116 --- [restartedMain] c.x.delivery.SpringBootJpaApplication    : Started SpringBootJpaApplication in 6.346 seconds (JVM running for 7.175)
+2022-05-30 11:39:34.550  INFO 42116 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-30 11:39:34.551  INFO 42116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-30 11:39:34.554  INFO 42116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-30 11:39:34.886 DEBUG 42116 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        brand0_.brand_id as brand_id1_0_,
+        brand0_.brand_name as brand_na2_0_,
+        brand0_.category_category_id as category3_0_ 
+    from
+        brands brand0_
+2022-05-30 11:39:35.123 DEBUG 42116 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        productlis0_.brand_brand_id as brand_br1_1_0_,
+        productlis0_.product_lists_product_id as product_2_1_0_,
+        product1_.product_id as product_1_4_1_,
+        product1_.brand_brand_id as brand_br6_4_1_,
+        product1_.description as descript2_4_1_,
+        product1_.price as price3_4_1_,
+        product1_.product_name as product_4_4_1_,
+        product1_.quantity as quantity5_4_1_,
+        brand2_.brand_id as brand_id1_0_2_,
+        brand2_.brand_name as brand_na2_0_2_,
+        brand2_.category_category_id as category3_0_2_,
+        category3_.category_id as category1_2_3_,
+        category3_.category_name as category2_2_3_ 
+    from
+        brands_product_lists productlis0_ 
+    inner join
+        products product1_ 
+            on productlis0_.product_lists_product_id=product1_.product_id 
+    left outer join
+        brands brand2_ 
+            on product1_.brand_brand_id=brand2_.brand_id 
+    left outer join
+        categories category3_ 
+            on brand2_.category_category_id=category3_.category_id 
+    where
+        productlis0_.brand_brand_id=?
+2022-05-30 11:39:35.130 TRACE 42116 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2022-05-30 11:39:35.143 DEBUG 42116 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        productlis0_.brand_brand_id as brand_br1_1_0_,
+        productlis0_.product_lists_product_id as product_2_1_0_,
+        product1_.product_id as product_1_4_1_,
+        product1_.brand_brand_id as brand_br6_4_1_,
+        product1_.description as descript2_4_1_,
+        product1_.price as price3_4_1_,
+        product1_.product_name as product_4_4_1_,
+        product1_.quantity as quantity5_4_1_,
+        brand2_.brand_id as brand_id1_0_2_,
+        brand2_.brand_name as brand_na2_0_2_,
+        brand2_.category_category_id as category3_0_2_,
+        category3_.category_id as category1_2_3_,
+        category3_.category_name as category2_2_3_ 
+    from
+        brands_product_lists productlis0_ 
+    inner join
+        products product1_ 
+            on productlis0_.product_lists_product_id=product1_.product_id 
+    left outer join
+        brands brand2_ 
+            on product1_.brand_brand_id=brand2_.brand_id 
+    left outer join
+        categories category3_ 
+            on brand2_.category_category_id=category3_.category_id 
+    where
+        productlis0_.brand_brand_id=?
+2022-05-30 11:39:35.144 TRACE 42116 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [2]
+2022-05-30 11:39:35.146 DEBUG 42116 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        productlis0_.brand_brand_id as brand_br1_1_0_,
+        productlis0_.product_lists_product_id as product_2_1_0_,
+        product1_.product_id as product_1_4_1_,
+        product1_.brand_brand_id as brand_br6_4_1_,
+        product1_.description as descript2_4_1_,
+        product1_.price as price3_4_1_,
+        product1_.product_name as product_4_4_1_,
+        product1_.quantity as quantity5_4_1_,
+        brand2_.brand_id as brand_id1_0_2_,
+        brand2_.brand_name as brand_na2_0_2_,
+        brand2_.category_category_id as category3_0_2_,
+        category3_.category_id as category1_2_3_,
+        category3_.category_name as category2_2_3_ 
+    from
+        brands_product_lists productlis0_ 
+    inner join
+        products product1_ 
+            on productlis0_.product_lists_product_id=product1_.product_id 
+    left outer join
+        brands brand2_ 
+            on product1_.brand_brand_id=brand2_.brand_id 
+    left outer join
+        categories category3_ 
+            on brand2_.category_category_id=category3_.category_id 
+    where
+        productlis0_.brand_brand_id=?
+2022-05-30 11:39:35.147 TRACE 42116 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [3]
+2022-05-30 11:39:35.149 DEBUG 42116 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        productlis0_.brand_brand_id as brand_br1_1_0_,
+        productlis0_.product_lists_product_id as product_2_1_0_,
+        product1_.product_id as product_1_4_1_,
+        product1_.brand_brand_id as brand_br6_4_1_,
+        product1_.description as descript2_4_1_,
+        product1_.price as price3_4_1_,
+        product1_.product_name as product_4_4_1_,
+        product1_.quantity as quantity5_4_1_,
+        brand2_.brand_id as brand_id1_0_2_,
+        brand2_.brand_name as brand_na2_0_2_,
+        brand2_.category_category_id as category3_0_2_,
+        category3_.category_id as category1_2_3_,
+        category3_.category_name as category2_2_3_ 
+    from
+        brands_product_lists productlis0_ 
+    inner join
+        products product1_ 
+            on productlis0_.product_lists_product_id=product1_.product_id 
+    left outer join
+        brands brand2_ 
+            on product1_.brand_brand_id=brand2_.brand_id 
+    left outer join
+        categories category3_ 
+            on brand2_.category_category_id=category3_.category_id 
+    where
+        productlis0_.brand_brand_id=?
+2022-05-30 11:39:35.150 TRACE 42116 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [4]
+2022-05-30 11:39:46.120  INFO 42116 --- [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-30 11:39:46.157  INFO 42116 --- [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-30 11:39:46.160  INFO 42116 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-30 11:39:46.162  INFO 42116 --- [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
